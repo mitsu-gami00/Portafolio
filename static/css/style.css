@@ -1,0 +1,400 @@
+
+/* ==============================
+   CONFIGURACIÓN GENERAL
+============================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #080808;
+    color: #ffffff;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+/* ==============================
+   BARRA DE NAVEGACIÓN
+============================== */
+
+header {
+    width: 100%;
+    background-color: #0d0d0d;
+    border-bottom: 1px solid #252525;
+
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+nav {
+    max-width: 1100px;
+    margin: auto;
+    padding: 20px;
+}
+
+nav ul {
+    list-style: none;
+
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+}
+
+nav a {
+    color: #aaaaaa;
+    text-decoration: none;
+
+    font-size: 17px;
+    font-weight: bold;
+
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #ffffff;
+}
+
+
+/* ==============================
+   CONTENIDO PRINCIPAL
+============================== */
+
+main {
+    max-width: 1100px;
+    margin: auto;
+}
+
+
+/* ==============================
+   PRESENTACIÓN
+============================== */
+
+#presentacion {
+    min-height: 85vh;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+
+    padding: 60px 20px;
+}
+
+#presentacion img {
+    width: 190px;
+    height: 190px;
+
+    object-fit: cover;
+
+    border-radius: 50%;
+    border: 3px solid #333333;
+
+    margin-bottom: 30px;
+
+    transition: 0.4s;
+}
+
+#presentacion img:hover {
+    transform: scale(1.05);
+    border-color: #777777;
+
+    box-shadow: 0 0 30px rgba(255, 255, 255, 0.12);
+}
+
+#presentacion h1 {
+    font-size: 52px;
+    margin-bottom: 15px;
+}
+
+#presentacion p {
+    max-width: 650px;
+
+    color: #999999;
+
+    font-size: 19px;
+    line-height: 1.7;
+}
+
+
+/* ==============================
+   PROYECTOS
+============================== */
+
+#proyectos {
+    padding: 100px 20px;
+}
+
+#proyectos > h2 {
+    text-align: center;
+
+    font-size: 38px;
+
+    margin-bottom: 50px;
+}
+
+.proyecto {
+    background-color: #111111;
+
+    border: 1px solid #252525;
+    border-radius: 15px;
+
+    padding: 30px;
+
+    margin-bottom: 25px;
+
+    transition: 0.3s;
+}
+
+.proyecto:hover {
+    background-color: #151515;
+
+    border-color: #444444;
+
+    transform: translateY(-6px);
+
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.6);
+}
+
+.proyecto h2 {
+    font-size: 26px;
+
+    margin-bottom: 15px;
+}
+
+.proyecto p {
+    color: #a0a0a0;
+
+    font-size: 16px;
+
+    line-height: 1.7;
+}
+
+
+/* ==============================
+   CONTACTO
+============================== */
+
+#contacto {
+    padding: 100px 20px;
+}
+
+#contacto > h2 {
+    text-align: center;
+
+    font-size: 38px;
+
+    margin-bottom: 50px;
+}
+
+form {
+    max-width: 650px;
+
+    margin: auto;
+
+    background-color: #111111;
+
+    border: 1px solid #252525;
+    border-radius: 15px;
+
+    padding: 35px;
+}
+
+form label {
+    display: block;
+
+    margin-bottom: 8px;
+
+    color: #dddddd;
+
+    font-weight: bold;
+}
+
+form input,
+form textarea {
+    width: 100%;
+
+    background-color: #080808;
+
+    color: #ffffff;
+
+    border: 1px solid #333333;
+    border-radius: 8px;
+
+    padding: 13px;
+
+    margin-bottom: 20px;
+
+    font-family: Arial, Helvetica, sans-serif;
+
+    outline: none;
+
+    transition: 0.3s;
+}
+
+form input:focus,
+form textarea:focus {
+    border-color: #777777;
+
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.08);
+}
+
+form textarea {
+    min-height: 150px;
+
+    resize: vertical;
+}
+
+form button {
+    width: 100%;
+
+    background-color: #ffffff;
+
+    color: #000000;
+
+    border: none;
+    border-radius: 8px;
+
+    padding: 13px;
+
+    font-size: 16px;
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+form button:hover {
+    background-color: #cccccc;
+
+    transform: translateY(-2px);
+}
+
+
+/* ==============================
+   RESPONSIVE
+============================== */
+
+@media (max-width: 600px) {
+
+    nav ul {
+        gap: 20px;
+    }
+
+    nav a {
+        font-size: 15px;
+    }
+
+    #presentacion {
+        min-height: 75vh;
+    }
+
+    #presentacion img {
+        width: 150px;
+        height: 150px;
+    }
+
+    #presentacion h1 {
+        font-size: 38px;
+    }
+
+    #presentacion p {
+        font-size: 16px;
+    }
+
+    #proyectos,
+    #contacto {
+        padding: 70px 15px;
+    }
+
+    form {
+        padding: 25px;
+    }
+}
+
+/* ==============================
+   LINKEDIN
+============================== */
+
+#presentacion > a {
+    margin-top: 25px;
+
+    padding: 10px 20px;
+
+    border: 1px solid #333333;
+    border-radius: 8px;
+
+    color: #ffffff;
+    text-decoration: none;
+
+    transition: 0.3s;
+}
+
+#presentacion > a:hover {
+    background-color: #ffffff;
+    color: #000000;
+
+    transform: translateY(-3px);
+}
+
+
+/* ==============================
+   TARJETA JOBXP
+============================== */
+
+.proyecto > div {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 40px;
+}
+
+.proyecto > div p {
+    flex: 1;
+}
+
+.proyecto > div img {
+    width: 420px;
+    max-width: 45%;
+
+    border-radius: 10px;
+    border: 1px solid #333333;
+
+    transition: 0.4s;
+}
+
+.proyecto > div img:hover {
+    transform: scale(1.03);
+
+    border-color: #666666;
+
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.7);
+}
+
+
+/* ==============================
+   PROYECTOS EN CELULAR
+============================== */
+
+@media (max-width: 700px) {
+
+    .proyecto > div {
+        flex-direction: column;
+    }
+
+    .proyecto > div img {
+        width: 100%;
+        max-width: 100%;
+    }
+}
