@@ -163,7 +163,7 @@ main {
     margin-bottom: 30px;
 }
 
-#presentacion > a {
+#presentacion>a {
     display: inline-block;
 
     padding: 12px 25px;
@@ -187,7 +187,7 @@ main {
         border-color 0.3s ease;
 }
 
-#presentacion > a:hover {
+#presentacion>a:hover {
     background-color: #ffffff;
 
     color: #000000;
@@ -206,7 +206,7 @@ main {
     padding: 100px 0;
 }
 
-#habilidades > h2 {
+#habilidades>h2 {
     text-align: center;
 
     font-size: 40px;
@@ -296,6 +296,98 @@ main {
     margin-right: 10px;
 }
 
+/* ========================================
+   BARRA DE TECNOLOGÍAS
+======================================== */
+
+.tecnologias {
+    display: flex;
+
+    justify-content: space-evenly;
+    align-items: center;
+
+    flex-wrap: wrap;
+
+    gap: 30px;
+
+    margin-top: 50px;
+
+    padding: 30px 40px;
+
+    background-color: #101010;
+
+    border: 1px solid #252525;
+
+    border-radius: 16px;
+
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+
+/* ========================================
+   TECNOLOGÍA
+======================================== */
+
+.tecnologia {
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 10px;
+
+    width: 80px;
+
+    color: #888888;
+
+    cursor: default;
+
+    transition:
+        transform 0.3s ease,
+        color 0.3s ease;
+}
+
+
+/* ICONO */
+
+.tecnologia img {
+    width: 50px;
+
+    height: 50px;
+
+    object-fit: contain;
+
+    transition:
+        transform 0.3s ease,
+        filter 0.3s ease;
+}
+
+
+/* NOMBRE */
+
+.tecnologia span {
+    font-size: 14px;
+
+    font-weight: bold;
+
+    text-align: center;
+}
+
+
+/* HOVER */
+
+.tecnologia:hover {
+    transform: translateY(-8px);
+
+    color: #ffffff;
+}
+
+.tecnologia:hover img {
+    transform: scale(1.15);
+}
 
 /* ========================================
    PROYECTOS
@@ -305,7 +397,7 @@ main {
     padding: 100px 0;
 }
 
-#proyectos > h2 {
+#proyectos>h2 {
     text-align: center;
 
     font-size: 40px;
@@ -349,7 +441,7 @@ main {
 
 /* TÍTULO DEL PROYECTO */
 
-.proyecto > h2 {
+.proyecto>h2 {
     font-size: 27px;
 
     margin-bottom: 30px;
@@ -391,6 +483,98 @@ main {
     margin-bottom: 20px;
 }
 
+/* ========================================
+   FORMACIÓN Y CERTIFICACIONES
+======================================== */
+
+#formacion {
+    padding: 100px 0;
+}
+
+#formacion>h2 {
+    text-align: center;
+    font-size: 40px;
+    margin-bottom: 50px;
+}
+
+.contenedor-formacion {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.formacion {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    background-color: #101010;
+    border: 1px solid #252525;
+    border-radius: 16px;
+
+    padding: 30px;
+    min-height: 350px;
+
+    text-align: center;
+
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+
+    transition:
+        transform 0.35s ease,
+        border-color 0.35s ease,
+        background-color 0.35s ease,
+        box-shadow 0.35s ease;
+}
+
+.formacion:hover {
+    transform: translateY(-6px);
+    background-color: #131313;
+    border-color: #444444;
+    box-shadow: 0 18px 40px rgba(0, 0, 0, 0.5);
+}
+
+.formacion h3 {
+    font-size: 22px;
+    margin-bottom: 12px;
+    color: #ffffff;
+}
+
+.estado-formacion {
+    display: inline-block;
+
+    padding: 5px 12px;
+    margin-bottom: 20px;
+
+    background-color: #171717;
+    border: 1px solid #3a3a3a;
+    border-radius: 20px;
+
+    color: #ffffff;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.formacion img {
+    width: 100px;
+    height: 100px;
+
+    object-fit: contain;
+    display: block;
+
+    margin: 20px auto;
+
+    transition: transform 0.3s ease;
+}
+
+.formacion:hover img {
+    transform: scale(1.1);
+}
+
+.formacion>p:last-child {
+    color: #aaaaaa;
+    font-size: 15px;
+    line-height: 1.7;
+}
 
 /* ========================================
    IMÁGENES DE PROYECTOS
@@ -568,7 +752,7 @@ main {
     padding: 100px 0;
 }
 
-#contacto > h2 {
+#contacto>h2 {
     text-align: center;
 
     font-size: 40px;
@@ -767,6 +951,11 @@ main {
         grid-template-columns: repeat(2, 1fr);
     }
 
+    /* FORMACIÓN */
+
+    .contenedor-formacion {
+        grid-template-columns: 1fr 1fr;
+    }
 
     /* PROYECTOS */
 
@@ -840,7 +1029,7 @@ main {
         padding: 70px 0;
     }
 
-    #habilidades > h2 {
+    #habilidades>h2 {
         font-size: 32px;
     }
 
@@ -848,6 +1037,66 @@ main {
         grid-template-columns: 1fr;
     }
 
+    .tecnologias {
+        gap: 25px;
+
+        padding: 25px 15px;
+    }
+
+    .tecnologia {
+        min-width: 65px;
+    }
+
+    .tecnologia img {
+        width: 42px;
+        height: 42px;
+    }
+
+    .tecnologia span {
+        font-size: 12px;
+    }
+
+    /* TECNOLOGÍAS */
+
+    .tecnologias {
+        gap: 25px;
+
+        padding: 25px 15px;
+    }
+
+    .tecnologia {
+        width: 65px;
+    }
+
+    .tecnologia img {
+        width: 42px;
+
+        height: 42px;
+    }
+
+    .tecnologia span {
+        font-size: 12px;
+    }
+
+
+    /* FORMACIÓN */
+
+    #formacion {
+        padding: 70px 0;
+    }
+
+    #formacion>h2 {
+        font-size: 32px;
+    }
+
+    .contenedor-formacion {
+        grid-template-columns: 1fr;
+    }
+
+    .formacion {
+        min-height: auto;
+        padding: 25px;
+    }
 
     /* PROYECTOS */
 
@@ -855,8 +1104,8 @@ main {
         padding: 70px 0;
     }
 
-    #proyectos > h2,
-    #contacto > h2 {
+    #proyectos>h2,
+    #contacto>h2 {
         font-size: 32px;
     }
 
@@ -866,7 +1115,7 @@ main {
         margin-bottom: 25px;
     }
 
-    .proyecto > h2 {
+    .proyecto>h2 {
         font-size: 23px;
 
         margin-bottom: 25px;
@@ -952,7 +1201,7 @@ main {
         padding: 20px;
     }
 
-    .proyecto > h2 {
+    .proyecto>h2 {
         font-size: 21px;
     }
 
@@ -964,4 +1213,181 @@ main {
     #formulario-contacto {
         padding: 20px;
     }
+}
+
+/* ========================================
+   BOTÓN DE IDIOMA
+======================================== */
+
+#boton-idioma {
+    padding: 8px 14px;
+
+    background-color: #111111;
+
+    color: #ffffff;
+
+    border: 1px solid #444444;
+
+    border-radius: 7px;
+
+    font-size: 14px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition:
+        background-color 0.3s ease,
+        color 0.3s ease,
+        border-color 0.3s ease,
+        transform 0.3s ease;
+}
+
+#boton-idioma:hover {
+    background-color: #ffffff;
+
+    color: #000000;
+
+    border-color: #ffffff;
+
+    transform: translateY(-2px);
+}
+
+/* ========================================
+   FORMACIÓN Y CERTIFICACIONES
+======================================== */
+
+/* TECNOLOGÍAS */
+
+.tecnologias {
+    gap: 20px;
+
+    padding: 20px 10px;
+}
+
+.tecnologia {
+    width: 60px;
+}
+
+.tecnologia img {
+    width: 38px;
+
+    height: 38px;
+}
+
+.tecnologia span {
+    font-size: 11px;
+}
+
+
+/* FORMACIÓN */
+
+.formacion {
+    padding: 22px;
+}
+
+.formacion h3 {
+    font-size: 19px;
+}
+
+.tecnologias {
+    gap: 20px;
+}
+
+.tecnologia {
+    min-width: 60px;
+}
+
+.tecnologia img {
+    width: 38px;
+    height: 38px;
+}
+
+
+/* CONTENEDOR */
+
+.contenedor-formacion {
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 25px;
+}
+
+
+/* TARJETAS */
+
+.formacion {
+    background-color: #101010;
+
+    border: 1px solid #252525;
+
+    border-radius: 16px;
+
+    padding: 30px;
+
+    min-height: 230px;
+
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+
+    transition:
+        transform 0.35s ease,
+        border-color 0.35s ease,
+        background-color 0.35s ease,
+        box-shadow 0.35s ease;
+}
+
+.formacion:hover {
+    transform: translateY(-6px);
+
+    background-color: #131313;
+
+    border-color: #444444;
+
+    box-shadow: 0 18px 40px rgba(0, 0, 0, 0.5);
+}
+
+
+/* TÍTULO */
+
+.formacion h3 {
+    font-size: 22px;
+
+    margin-bottom: 10px;
+
+    color: #ffffff;
+}
+
+
+/* ESTADO */
+
+.estado-formacion {
+    display: inline-block;
+
+    padding: 5px 12px;
+
+    margin-bottom: 20px;
+
+    background-color: #171717;
+
+    border: 1px solid #3a3a3a;
+
+    border-radius: 20px;
+
+    color: #ffffff;
+
+    font-size: 13px;
+
+    font-weight: bold;
+}
+
+
+/* DESCRIPCIÓN */
+
+.formacion>p:last-child {
+    color: #aaaaaa;
+
+    font-size: 16px;
+
+    line-height: 1.8;
 }

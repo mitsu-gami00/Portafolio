@@ -104,3 +104,16 @@ imagenInformativa.addEventListener("mouseleave", () => {
     imagenInformativa.src = imagenesInformativa[0];
 
 });
+const botonIdioma = document.getElementById("boton-idioma");
+
+if (botonIdioma) {
+    botonIdioma.addEventListener("click", () => {
+
+        if (document.documentElement.lang === "es") {
+            window.location.href = "english.html";
+        } else {
+            window.location.href = "index.html";
+        }
+
+    });
+}
