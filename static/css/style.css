@@ -21,7 +21,7 @@ body {
 
 
 /* ========================================
-   HEADER / NAVEGACIÓN
+   NAVEGACIÓN
 ======================================== */
 
 header {
@@ -88,7 +88,7 @@ nav a:hover::after {
 
 
 /* ========================================
-   CONTENIDO GENERAL
+   CONTENIDO PRINCIPAL
 ======================================== */
 
 main {
@@ -215,7 +215,7 @@ main {
 }
 
 
-/* CONTENEDOR DE LAS TARJETAS */
+/* CONTENEDOR */
 
 .contenedor-habilidades {
     display: grid;
@@ -226,7 +226,7 @@ main {
 }
 
 
-/* TARJETA */
+/* TARJETAS */
 
 .habilidad {
     background-color: #101010;
@@ -259,7 +259,7 @@ main {
 }
 
 
-/* TÍTULO DE HABILIDAD */
+/* TÍTULO */
 
 .habilidad h3 {
     font-size: 22px;
@@ -347,7 +347,7 @@ main {
 }
 
 
-/* TÍTULO */
+/* TÍTULO DEL PROYECTO */
 
 .proyecto > h2 {
     font-size: 27px;
@@ -358,7 +358,9 @@ main {
 }
 
 
-/* CONTENIDO */
+/* ========================================
+   CONTENIDO DEL PROYECTO
+======================================== */
 
 .contenido-proyecto {
     display: grid;
@@ -390,7 +392,9 @@ main {
 }
 
 
-/* IMAGEN */
+/* ========================================
+   IMÁGENES DE PROYECTOS
+======================================== */
 
 .contenido-proyecto img {
     width: 100%;
@@ -416,6 +420,92 @@ main {
     border-color: #666666;
 
     box-shadow: 0 12px 30px rgba(0, 0, 0, 0.6);
+}
+
+
+/* ========================================
+   GALERÍA PÁGINA INFORMATIVA
+======================================== */
+
+.galeria-proyecto {
+    width: 100%;
+    max-width: 420px;
+
+    overflow: hidden;
+
+    border-radius: 10px;
+}
+
+.galeria-proyecto img {
+    width: 100%;
+    max-width: 420px;
+
+    display: block;
+
+    aspect-ratio: 16 / 10;
+
+    object-fit: cover;
+
+    cursor: pointer;
+
+    transition:
+        transform 0.4s ease,
+        opacity 0.3s ease,
+        border-color 0.4s ease,
+        box-shadow 0.4s ease;
+}
+
+.galeria-proyecto:hover img {
+    transform: scale(1.03);
+
+    border-color: #666666;
+
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.6);
+}
+
+
+/* ========================================
+   VIDEO BLACK JACK
+======================================== */
+
+.video-proyecto {
+    width: 100%;
+    max-width: 420px;
+
+    overflow: hidden;
+
+    border-radius: 10px;
+
+    border: 1px solid #333333;
+
+    background-color: #000000;
+
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+
+    transition:
+        transform 0.4s ease,
+        border-color 0.4s ease,
+        box-shadow 0.4s ease;
+}
+
+.video-proyecto video {
+    width: 100%;
+
+    display: block;
+
+    aspect-ratio: 16 / 10;
+
+    object-fit: cover;
+
+    cursor: pointer;
+}
+
+.video-proyecto:hover {
+    transform: scale(1.03);
+
+    border-color: #666666;
+
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.6);
 }
 
 
@@ -487,7 +577,9 @@ main {
 }
 
 
-/* FORMULARIO */
+/* ========================================
+   FORMULARIO
+======================================== */
 
 #formulario-contacto {
     width: 100%;
@@ -520,7 +612,7 @@ main {
 }
 
 
-/* INPUTS */
+/* INPUTS Y TEXTAREA */
 
 #formulario-contacto input,
 #formulario-contacto textarea {
@@ -574,7 +666,9 @@ main {
 }
 
 
-/* BOTÓN */
+/* ========================================
+   BOTÓN DEL FORMULARIO
+======================================== */
 
 #boton-enviar {
     width: 100%;
@@ -667,9 +761,14 @@ main {
         width: 92%;
     }
 
+    /* HABILIDADES */
+
     .contenedor-habilidades {
         grid-template-columns: repeat(2, 1fr);
     }
+
+
+    /* PROYECTOS */
 
     .contenido-proyecto {
         grid-template-columns: 1fr 320px;
@@ -677,9 +776,14 @@ main {
         gap: 25px;
     }
 
-    .contenido-proyecto img {
+    .contenido-proyecto img,
+    .galeria-proyecto,
+    .video-proyecto {
         max-width: 320px;
     }
+
+
+    /* PRESENTACIÓN */
 
     #presentacion h1 {
         font-size: 42px;
@@ -692,6 +796,8 @@ main {
 ======================================== */
 
 @media (max-width: 700px) {
+
+    /* NAVEGACIÓN */
 
     header {
         padding: 18px 20px;
@@ -774,10 +880,15 @@ main {
         gap: 25px;
     }
 
-    .contenido-proyecto img {
+    .contenido-proyecto img,
+    .galeria-proyecto,
+    .video-proyecto {
         max-width: 100%;
+    }
 
-        order: -1;
+    .galeria-proyecto,
+    .video-proyecto {
+        width: 100%;
     }
 
 
@@ -822,6 +933,7 @@ main {
         font-size: 13px;
     }
 
+
     #presentacion h1 {
         font-size: 30px;
     }
@@ -830,9 +942,11 @@ main {
         font-size: 15px;
     }
 
+
     .habilidad {
         padding: 22px;
     }
+
 
     .proyecto {
         padding: 20px;
@@ -845,6 +959,7 @@ main {
     .info-proyecto p {
         font-size: 15px;
     }
+
 
     #formulario-contacto {
         padding: 20px;

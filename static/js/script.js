@@ -68,10 +68,10 @@ videoBlackjack.addEventListener("mouseleave", () => {
 const imagenInformativa = document.getElementById("imagen-informativa");
 
 const imagenesInformativa = [
-    "static/images/páginainformativa.PNG",
-    "static/images/seccion2.PNG",
-    "static/images/seccion3.PNG",
-    "static/images/seccion4.PNG"
+    "static/images/páginainformativa1.PNG",
+    "static/images/páginainformativa2.PNG",
+    "static/images/páginainformativa3.PNG",
+    "static/images/páginainformativa4.PNG"
 ];
 
 let indiceImagen = 0;
