@@ -6,10 +6,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-}
-
-html {
-    scroll-behavior: smooth;
+    border: red 1px solid;
 }
 
 body {
@@ -25,9 +22,6 @@ body {
 ======================================== */
 
 header {
-    position: sticky;
-    top: 0;
-    z-index: 1000;
 
     width: 100%;
     padding: 20px 40px;
@@ -498,8 +492,9 @@ main {
 }
 
 .contenedor-formacion {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
     gap: 25px;
 }
 
@@ -514,6 +509,7 @@ main {
 
     padding: 30px;
     min-height: 350px;
+    min-width: 450px;
 
     text-align: center;
 
@@ -1090,11 +1086,13 @@ main {
     }
 
     .contenedor-formacion {
-        grid-template-columns: 1fr;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
     }
 
     .formacion {
-        min-height: auto;
+        min-width: 300px;
         padding: 25px;
     }
 
@@ -1307,10 +1305,9 @@ main {
 /* CONTENEDOR */
 
 .contenedor-formacion {
-    display: grid;
-
-    grid-template-columns: repeat(2, 1fr);
-
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
     gap: 25px;
 }
 
@@ -1326,7 +1323,7 @@ main {
 
     padding: 30px;
 
-    min-height: 230px;
+    min-width: 300px;
 
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
 
